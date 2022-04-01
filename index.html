@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		.body {
+			background-image: url(1.jpg);
+			background-size: 100% auto;
+		}
+		.dog {
+			background-image: url(2.png);
+			background-size: 100px auto;
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			margin-left: 1200px;
+			margin-top: 1200px;
+			transition: 1s;
+		}
+		.flowers {
+			background-image: url(3_1.png);
+			background-size: 300px auto;
+			width: 300px;
+			height: 50px;
+			position: absolute;
+			margin-left: 2100px;
+			margin-top: 1239px;
+			transition: 1s;
+		}
+		.tree {
+			background-image: url(4.png);
+			background-size: 600px auto;
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			margin-left: 540px;
+			margin-top: -200px;
+			transition: 1s;
+		}
+		.black {
+			background-image: url(5.png);
+			background-size: 35px auto;
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			margin-left: 2185px;
+			margin-top: 1080px;
+			transition: 1s;
+		}
+		.count {
+			background-color: grey;
+			width: 300px;
+			height: 500px;
+
+		}
+	</style>
+</head>
+<body class="body">
+	<div class="dog"></div>
+	<div class="flowers"></div>
+	<div class="tree"></div>
+	<div class="black"></div>
+	<div class="count">
+		<div style="font-family: arial;font-size: 40px;padding-top: 40px;padding-left: 50px;" class="a">Собака</div>
+		<div style="font-family: arial;font-size: 40px;padding-top: 40px;padding-left: 50px;" class="b">Дерево</div>
+		<div style="font-family: arial;font-size: 40px;padding-top: 40px;padding-left: 50px;" class="c">Цветы</div>
+		<div style="font-family: arial;font-size: 40px;padding-top: 40px;padding-left: 50px;" class="d">Нечто</div>
+		<div style="font-family: arial;font-size: 40px;padding-top: 40px;padding-left: 50px;">Очки - <span class="e">0</span></div>
+	</div>
+	<script type="text/javascript">
+		let count = 0
+		document.querySelector('.dog').onclick = function () {
+			document.querySelector('.dog').style.display = "none";
+			count = count + 1
+			document.querySelector('.a').style.textDecoration = "line-through"
+			document.querySelector('.e').innerHTML = count;
+		}
+		document.querySelector('.tree').onclick = function () {
+			document.querySelector('.tree').style.display = "none";
+			count = count + 1
+			document.querySelector('.b').style.textDecoration = "line-through"
+			document.querySelector('.e').innerHTML = count;
+		}
+		document.querySelector('.flowers').onclick = function () {
+			document.querySelector('.flowers').style.display = "none";
+			count = count + 1
+			document.querySelector('.c').style.textDecoration = "line-through"
+			document.querySelector('.e').innerHTML = count;
+		}
+		document.querySelector('.black').onclick = function () {
+			document.querySelector('.black').style.display = "none";
+			count = count + 1
+			document.querySelector('.d').style.textDecoration = "line-through"
+			document.querySelector('.e').innerHTML = count;
+		}
+	</script>
+</body>
+</html>
